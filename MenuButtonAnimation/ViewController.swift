@@ -2,24 +2,29 @@
 //  ViewController.swift
 //  MenuButtonAnimation
 //
-//  Created by Harpreet on 10/07/18.
+//  Created by Animators on 10/07/18.
 //  Copyright © 2018 Animators. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,menuButtonProtocol {
 
+    @IBOutlet weak var menuButton: MenuButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        menuButton.menuButtonDelegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    func menuButtonPressed(){
+        print("menu button pressed")
+        
+        
+    }
 
 }
 
